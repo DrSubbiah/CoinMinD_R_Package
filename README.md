@@ -59,13 +59,6 @@ Install the latest CRAN release:
 install.packages("CoinMinD")
 ````
 
-For the development version (if hosted on GitHub):
-
-```r
-# install.packages("devtools")
-devtools::install_github("yourusername/CoinMinD")
-```
-
 ---
 
 ## Example Usage
@@ -76,33 +69,33 @@ library(CoinMinD)
 
 # Example data: counts for four categories
 x <- c(12, 18, 25, 15)
-n <- sum(x)
 
 # Compute simultaneous confidence intervals using different methods
 
 # Classical methods
-res_goodman <- CoinMinD(x, n, method = "Goodman")
-res_wald <- CoinMinD(x, n, method = "Wald")
-res_wilson <- CoinMinD(x, n, method = "Wilson")
-res_qh <- CoinMinD(x, n, method = "QH")
-res_fs <- CoinMinD(x, n, method = "FS")
-res_sg <- CoinMinD(x, n, method = "SG")
-res_friedrich <- CoinMinD(x, n, method = "Friedrich")
+res_goodman <- GM(x, alpha = 0.05)
+res_wald <- WALD(x, alpha = 0.05)
+res_waldcc <- WALDCC(x, alpha = 0.05)
+res_wilson <- WS(x, alpha = 0.05)
+res_qh <- QH(x, alpha = 0.05)
+res_fs <- FS(x, alpha = 0.05)
+res_sg <- SG(x, alpha = 0.05)
 
 # Bayesian methods
-res_bmde <- CoinMinD(x, n, method = "BMDE")
-res_bmdu <- CoinMinD(x, n, method = "BMDU")
+res_bmde <- BMDE(x, p = 0.1)
+res_bmdu <- BMDU(x, d = 2)
 
-# Print summaries of the results
+# Print summaries
 print(res_goodman)
 print(res_wald)
+print(res_waldcc)
 print(res_wilson)
 print(res_qh)
 print(res_fs)
 print(res_sg)
-print(res_friedrich)
 print(res_bmde)
 print(res_bmdu)
+
 ```
 
 ---
