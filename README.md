@@ -3,6 +3,9 @@
 
 # CoinMinD  
 [![CRAN version](https://www.r-pkg.org/badges/version/CoinMinD)](https://cran.r-project.org/package=CoinMinD)
+
+[![CRAN Downloads](https://cranlogs.r-pkg.org/badges/CoinMinD)](https://cran.r-project.org/package=CoinMinD)
+
 [![License: GPL (≥ 2)](https://img.shields.io/badge/license-GPL%20(%E2%89%A52)-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 ## Overview  
